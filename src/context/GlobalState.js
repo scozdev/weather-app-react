@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useState } from 'react';
+import React, { createContext, useEffect, useReducer, useState } from 'react';
 import AppReducer from './AppReducer';
 
 import { api } from "../api";
@@ -31,6 +31,12 @@ export const GlobalProvider = ({ children }) => {
                 });
             });
     }
+
+
+
+    useEffect(() => {
+        fetchWeather('istanbul')
+    }, [])
 
     return (<GlobalContext.Provider value={{
         weathers: state.weathers,

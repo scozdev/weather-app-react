@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import { GlobalContext } from '../context/GlobalState';
 
 function Header() {
-    const [query, setQuery] = useState("istanbul");
+    const [query, setQuery] = useState("");
     const { fetchWeather } = useContext(GlobalContext);
 
 
